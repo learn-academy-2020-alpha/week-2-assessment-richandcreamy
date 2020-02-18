@@ -12,26 +12,42 @@ var num2 = 0
 var num3 = -7
 // Expected output: "-7 is not divisble by three"
 
+const divThree = (num) => {
+    if(num % 3 === 0) {
+        return(num + ` is divisible by three`)
+    } else {
+        return(num + ` is not divisble by three`)
+    }
+}
 
-
-
+console.log(divThree(num1)),
+console.log(divThree(num2)),
+console.log(divThree(num3));
 
 // --------------------2) Create a function that takes in the randomNouns variable and returns an array with all the words capitalized.
 
 var randomNouns = ["streetlamp", "potato", "teeth", "conclusion", "nephew", "temperature", "database"]
 // Expected output: ["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew", "Temperature", "Database"]
 
+const firstCap = (words) => {
+        return words.map(nouns => nouns = nouns.charAt(0).toUpperCase() + nouns.slice(1))
+}
 
 
-
+console.log(firstCap(randomNouns));
 
 // --------------------3) Create a function that takes in the mixedDataArray array and returns an array with ONLY NUMBERS sorted from least to greatest.
 
 var mixedDataArray = [true, 8, "hello", 90, -8, null, 0, 46, 59, 107, "hey!"]
+
 // Expected output: [-8, 0, 8, 46, 59, 90, 107]
 
+// const digits = (mixedData) => {
+//     let     
+//      /\d/g.test(mixedData)
+// }
 
-
+// console.log(digits(mixedDataArray))
 
 
 // --------------------4) Create a function that takes in a string and logs the index of the first vowel.
